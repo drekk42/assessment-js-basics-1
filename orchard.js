@@ -27,15 +27,13 @@
     in cents. 
 */
 
-const fujiAcres = [2, 3, 3, 2, 2, 2, 1]
-const galaAcres = [5, 2, 4, 3, 6, 2, 4]
-const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
+const fujiAcres = [2, 3, 3, 2, 2, 2, 1];
+const galaAcres = [5, 2, 4, 3, 6, 2, 4];
+const pinkAcres = [1, 5, 4, 2, 1, 5, 4];
 
-const fujiPrice = .89 
-const galaPrice = .64
-const pinkPrice = .55
-
-
+const fujiPrice = 0.89;
+const galaPrice = 0.64;
+const pinkPrice = 0.55;
 
 // PROBLEM 1
 
@@ -49,11 +47,13 @@ const pinkPrice = .55
     Log `totalAcres` to the console.
 */
 
-// CODE HERE
+let totalAcres;
+for (let i = 0; i < fujiAcres.length; i++) {
+  totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i];
+}
+console.log(totalAcres);
 
-
-
-
+// This one had me stumped for a while. By using the '+=' operator I can add each index of the three arrays, as opposed to having the answer overwritten on each iteration.
 
 // PROBLEM 2
 
@@ -67,11 +67,10 @@ const pinkPrice = .55
     Log `averageDailyAcres` to the console.
 */
 
-// CODE HERE
+let averageDailyAcres = totalAcres / 7;
+console.log(averageDailyAcres);
 
-
-
-
+// Although I looked for a command that would allow me to see the average of an array, it seems that good old fashioned math is the way to go here.
 
 // PROBLEM 3
 
@@ -102,12 +101,16 @@ const pinkPrice = .55
 
 */
 
-let acresLeft = 174 
-let days = 0
+let acresLeft = 174;
+let days = 0;
 
-// CODE HERE
+while (acresLeft > 0) {
+  days++;
+  acresLeft - averageDailyAcres;
+}
+console.log(days);
 
-
+// I simply followed the instructions given above, which are very straightforward.
 
 // PROBLEM 4
 
@@ -133,16 +136,19 @@ let days = 0
     values to the new arrays.
 */
 
-// CODE HERE
+let fujiTons = [];
+let galaTons = [];
+let pinkTons = [];
+for (let i = 0; i < fujiAcres.length; i++) {
+  fujiTons.push(fujiAcres[i] * 6.5);
+  galaTons.push(galaAcres[i] * 6.5);
+  pinkTons.push(pinkAcres[i] * 6.5);
+}
+console.log(fujiTons);
+console.log(galaTons);
+console.log(pinkTons);
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
-
-
-
-
-
+// Using the hint given above, I used the push command to fill the empty arrays with the values of the previously created arrays (fujiAcres, galaAcres, pinkAcres).
 
 // PROBLEM 5
 
@@ -160,16 +166,19 @@ let days = 0
     Hint: there are 2000 pounds in a ton.
 */
 
-// CODE HERE 
+let fujiPounds = [];
+let galaPounds = [];
+let pinkPounds = [];
+for (let i = 0; i < fujiTons.length; i++) {
+  fujiPounds.push(fujiTons[i] * 2000);
+  galaPounds.push(galaTons[i] * 2000);
+  pinkPounds.push(pinkTons[i] * 2000);
+}
+console.log(fujiPounds);
+console.log(galaPounds);
+console.log(pinkPounds);
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
-
-
-
-
-
+// I was able to utilise the same process as questions 4 and 6, using the push command to fill the empty arrays with the values of the previously created arrays (fujiTons, galaTons, pinkTons).
 
 // PROBLEM 6
 
@@ -187,16 +196,19 @@ let days = 0
     console. 
 */
 
-// CODE HERE
+let fujiProfit = [];
+let galaProfit = [];
+let pinkProfit = [];
+for (let i = 0; i < fujiPounds.length; i++) {
+  fujiProfit.push(fujiPounds[i] * fujiPrice);
+  galaProfit.push(galaPounds[i] * galaPrice);
+  pinkProfit.push(pinkPounds[i] * pinkPrice);
+}
+console.log(fujiProfit);
+console.log(galaProfit);
+console.log(pinkProfit);
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
-
-
-
-
-
+// I was able to utilise the same process as questions 4 and 5, using the push command to fill the empty arrays with the values of the previously created arrays (fujiPounds, galaPounds, pinkPounds).
 
 // PROBLEM 7
 
@@ -208,4 +220,31 @@ let days = 0
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+let fujiTotal =
+  fujiProfit[0] +
+  fujiProfit[1] +
+  fujiProfit[2] +
+  fujiProfit[3] +
+  fujiProfit[4] +
+  fujiProfit[5] +
+  fujiProfit[6];
+let galaTotal =
+  galaProfit[0] +
+  galaProfit[1] +
+  galaProfit[2] +
+  galaProfit[3] +
+  galaProfit[4] +
+  galaProfit[5] +
+  galaProfit[6];
+let pinkTotal =
+  pinkProfit[0] +
+  pinkProfit[1] +
+  pinkProfit[2] +
+  pinkProfit[3] +
+  pinkProfit[4] +
+  pinkProfit[5] +
+  pinkProfit[6];
+let totalProfit = fujiTotal + galaTotal + pinkTotal;
+console.log(totalProfit);
+
+// I tried to research and utilize the reduce function, however I was having trouble understanding the logic of it and did not feel comfortable using it without guidance.

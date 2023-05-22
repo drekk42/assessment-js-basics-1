@@ -9,7 +9,7 @@
     It should be a string containing your best definition of what Git is.
 */
 
-//CODE HERE
+const gitDefinition = 'Git is a version control system that allows users to track progress and changes to code projects.';
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -17,7 +17,7 @@
     It should be a string containing your best definition of what GitHub is.
 */
 
-//CODE HERE
+const gitHubDefinition = 'A widely used cloud-based git repo hosting service.';
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -25,7 +25,7 @@
     It should be a string containing your best definition of what 'git init' does.
 */
 
-//CODE HERE
+const gitInitDefinition = 'A command that initializes a git repo in the currently occupied folder.'
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -33,7 +33,7 @@
     It should be a string containing your best definition of what 'git clone' does.
 */
 
-//CODE HERE
+const gitCloneDefinition = 'A command used to grab an existing git repo and make a copy in another directory';
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -41,7 +41,7 @@
     It should be a string containing your best definition of what 'git status' does.
 */
 
-//CODE HERE
+const gitStatusDefinition = 'A command that tells the user the current commit status of the corrently occupied git repo.';
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -52,7 +52,8 @@
     It should be a string containing the code to add all files.
 */
 
-//CODE HERE
+const gitAddDefinition = 'A command that adds files into the currently occupied git repo to be tracked.';
+const gitAddCode = 'git add .';
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -63,8 +64,8 @@
     It should be a string containing the code to commit using the message "initial commit".
 */
 
-//CODE HERE
-
+const gitCommitDefinition = 'A command that creates a snapshot of the files being tracked in the currently occupied repo';
+const gitCommitCode = 'git commit -m 'initial commit'';
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -72,4 +73,4 @@
     It should be a string containing your best definition of what 'git push' does.
 */
 
-//CODE HERE
+const gitPushDefinition = 'A command that uploads the contents of the remote repo with the contents of the local repo.';
